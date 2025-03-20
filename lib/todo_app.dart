@@ -15,4 +15,8 @@ class _TodoAppState extends State<TodoApp> {
   final GlobalKey<FormState> key = GlobalKey<FormState>();
   DateTime? selectedDate;
 
- 
+  // Membuat daftar task dalam list
+  List<Map<String, dynamic>> daftarTask = [];
+  AutovalidateMode _autoValidate = AutovalidateMode.disabled;
+
+  
