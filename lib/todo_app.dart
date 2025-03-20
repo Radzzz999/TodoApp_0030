@@ -121,4 +121,13 @@ class _TodoAppState extends State<TodoApp> {
               ],
             ),
             SizedBox(height: 20),
-            
+            // Menambahkan form dan validasi input
+            Form(
+              key: key,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      controller: taskController,
+                      validator: (value) {
+                        
