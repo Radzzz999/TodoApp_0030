@@ -35,4 +35,9 @@ class _TodoAppState extends State<TodoApp> {
           "deadline": selectedDate,
           "status": false,
         });
-        
+        // Menambahkan fitur reset setelah task ditambahkan
+        taskController.clear();
+        selectedDate = null;
+        _autoValidate = AutovalidateMode.disabled;
+      });
+      
