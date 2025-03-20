@@ -77,4 +77,31 @@ class _TodoAppState extends State<TodoApp> {
     ).show(context);
   }
 
-  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // Menambahkan AppBar dengan judul dan ikon menu
+      appBar: AppBar(
+        title: Text("Todo List"),
+        centerTitle: true,
+        backgroundColor: Colors.pinkAccent,
+        leading: Icon(Icons.menu),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(18),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Deadline :",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    
