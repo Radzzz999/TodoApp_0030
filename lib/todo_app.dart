@@ -113,4 +113,12 @@ class _TodoAppState extends State<TodoApp> {
                     ),
                   ],
                 ),
-                
+                //  Menambahkan ikon kalender untuk memilih deadline
+                IconButton(
+                  icon: Icon(Icons.date_range, color: Colors.blue, size: 35),
+                  onPressed: _showDatePicker,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            
