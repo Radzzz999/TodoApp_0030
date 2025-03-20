@@ -19,4 +19,13 @@ class _TodoAppState extends State<TodoApp> {
   List<Map<String, dynamic>> daftarTask = [];
   AutovalidateMode _autoValidate = AutovalidateMode.disabled;
 
-  
+  // Menambahkan fungsi untuk menambahkan task
+  void addTask() {
+    if (selectedDate == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Silakan pilih deadline terlebih dahulu!")),
+      );
+      return;
+    }
+
+    
