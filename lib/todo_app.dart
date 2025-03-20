@@ -130,4 +130,19 @@ class _TodoAppState extends State<TodoApp> {
                     child: TextFormField(
                       controller: taskController,
                       validator: (value) {
-                        
+                        // Memperbaiki validasi saat task ditambahkan
+                        if (value == null || value.isEmpty) {
+                          return "Task masih kosong";
+                        }
+                        return null;
+                      },
+                      autovalidateMode: _autoValidate,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Task",
+                        hintText: "Masukkan Task",
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  
