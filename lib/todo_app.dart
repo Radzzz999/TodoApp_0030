@@ -28,4 +28,11 @@ class _TodoAppState extends State<TodoApp> {
       return;
     }
 
-    
+    if (key.currentState!.validate()) {
+      setState(() {
+        daftarTask.add({
+          "task": taskController.text,
+          "deadline": selectedDate,
+          "status": false,
+        });
+        
