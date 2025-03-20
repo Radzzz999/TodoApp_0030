@@ -104,4 +104,13 @@ class _TodoAppState extends State<TodoApp> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    
+                    // Menampilkan deadline dalam tampilan list task
+                    Text(
+                      selectedDate != null
+                          ? "${selectedDate!.day}-${selectedDate!.month}-${selectedDate!.year} ${selectedDate!.hour}:${selectedDate!.minute}"
+                          : "Pilih Deadline",
+                      style: TextStyle(fontSize: 18, color: Colors.grey[700]),
+                    ),
+                  ],
+                ),
+                
