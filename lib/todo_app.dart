@@ -145,4 +145,28 @@ class _TodoAppState extends State<TodoApp> {
                     ),
                   ),
                   SizedBox(width: 10),
-                  
+                  // Menambahkan tombol untuk menyimpan task
+                  ElevatedButton(
+                    onPressed: () {
+                      if (key.currentState!.validate()) {
+                        addTask();
+                      }
+                    },
+                    child: Text(
+                      "Simpan",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                        Colors.deepPurple,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            
