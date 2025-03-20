@@ -199,3 +199,22 @@ class _TodoAppState extends State<TodoApp> {
                                   color: Colors.grey[700],
                                 ),
                               ),
+                              // Menambahkan status task (Done/Not Done)
+                              Text(
+                                daftarTask[index]["status"]
+                                    ? "Done"
+                                    : "Not Done",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color:
+                                      daftarTask[index]["status"]
+                                          ? Colors.green
+                                          : Colors.red,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              
