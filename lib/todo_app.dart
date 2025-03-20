@@ -217,4 +217,10 @@ class _TodoAppState extends State<TodoApp> {
                           ),
                           Row(
                             children: [
-                              
+                              // Menambahkan fitur update status task dari checkbox
+                              Checkbox(
+                                value: daftarTask[index]["status"],
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    daftarTask[index]["status"] = value!;
+                                  
