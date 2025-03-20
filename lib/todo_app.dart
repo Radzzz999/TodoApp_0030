@@ -40,4 +40,15 @@ class _TodoAppState extends State<TodoApp> {
         selectedDate = null;
         _autoValidate = AutovalidateMode.disabled;
       });
-      
+      // Menampilkan pesan saat task berhasil ditambahkan
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Task berhasil ditambahkan!")),
+      );
+    } else {
+      setState(() {
+        _autoValidate = AutovalidateMode.onUserInteraction;
+      });
+    }
+  }
+
+  
