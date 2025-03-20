@@ -51,4 +51,15 @@ class _TodoAppState extends State<TodoApp> {
     }
   }
 
-  
+  // Menggunakan bottom_picker untuk memilih tanggal
+  void _showDatePicker() {
+    BottomPicker.dateTime(
+      pickerTitle: Text(
+        'Pilih Tanggal & Waktu Deadline',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+          color: Colors.black,
+        ),
+      ),
+      
