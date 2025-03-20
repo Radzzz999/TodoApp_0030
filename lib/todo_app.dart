@@ -223,4 +223,21 @@ class _TodoAppState extends State<TodoApp> {
                                 onChanged: (bool? value) {
                                   setState(() {
                                     daftarTask[index]["status"] = value!;
-                                  
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
