@@ -62,4 +62,19 @@ class _TodoAppState extends State<TodoApp> {
           color: Colors.black,
         ),
       ),
-      
+      onSubmit: (date) {
+        setState(() {
+          selectedDate = date;
+        });
+      },
+      onCloseButtonPressed: () {
+        print('Picker closed');
+      },
+      minDateTime: DateTime.now(),
+      maxDateTime: DateTime(2025, 12, 31),
+      initialDateTime: selectedDate ?? DateTime.now(),
+      gradientColors: [Color(0xfffdcbf1), Color(0xffe6dee9)],
+    ).show(context);
+  }
+
+  
